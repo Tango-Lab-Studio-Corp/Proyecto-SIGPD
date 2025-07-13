@@ -18,7 +18,7 @@ Proyecto-SIGPD/
 - ├── juego.css  **># Estilos visuales, animación de fondo**
 - ├── juego.js  **># Funcionalidad de arrastrar y soltar fichas(Drag and drop)**
 - └── img/  **># Contiene todos los recursos visuales y mutimedia del programa**
- - img/  fondo-sin-letras.jpg **># Imagen usada para el fondo en movimiento para el menu**
+
 ---
 
 ## 🧪 Tecnologías Utilizadas
