@@ -5,9 +5,9 @@ Este proyecto es parte del Sistema Informático de Gestión de Partidas para Dra
 ## 🗂 Estructura del repositorio
 
 Proyecto-SIGPD/
-├── index.html # Página principal con las zonas y fichas
-├── estilo.css # Estilos visuales, animación de fondo
-├── script.js # Funcionalidad de arrastrar y soltar fichas
+├── Index.html # Página principal con las zonas y fichas
+├── juego.css # Estilos visuales, animación de fondo
+├── juego.js # Funcionalidad de arrastrar y soltar fichas
 └── img/
     └── fondo-sin-letras.jpg # Imagen animada de fondo
 
