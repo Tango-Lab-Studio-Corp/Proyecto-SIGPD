@@ -14,11 +14,11 @@ El usuario puede arrastrar y soltar fichas de colores en distintas zonas del tab
 ---
 ## 🗂️ Estructura del Repositorio
 Proyecto-SIGPD/
-> ├── index.html  **># Página principal con las zonas y fichas**
-├── juego.css  **># Estilos visuales, animación de fondo**
-├── juego.js  **># Funcionalidad de arrastrar y soltar fichas(Drag and drop)**
-└── img/  **># Contiene todos los recursos visuales y mutimedia del programa**
-
+- ├── index.html  **># Página principal con las zonas y fichas**
+- ├── juego.css  **># Estilos visuales, animación de fondo**
+- ├── juego.js  **># Funcionalidad de arrastrar y soltar fichas(Drag and drop)**
+- └── img/  **># Contiene todos los recursos visuales y mutimedia del programa**
+ - img/  fondo-sin-letras.jpg **># Imagen usada para el fondo en movimiento para el menu**
 ---
 
 ## 🧪 Tecnologías Utilizadas
