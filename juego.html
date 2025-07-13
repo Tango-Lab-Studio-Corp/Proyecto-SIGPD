@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIGPD - Juego de Fichas</title>
+  <link rel="stylesheet" href="juego.css">
+</head>
+<body>
+  <h1>Colocación de Fichas - SIGPD</h1>
+
+  <div id="fichas-container">
+    <div class="ficha rojo" draggable="true"></div>
+    <div class="ficha azul" draggable="true"></div>
+    <div class="ficha verde" draggable="true"></div>
+    <div class="ficha amarillo" draggable="true"></div>
+    <div class="ficha violeta" draggable="true"></div>
+    <div class="ficha naranja" draggable="true"></div>
+  </div>
+
+  <div id="tablero">
+    <div class="zona" data-zona="Sala de Máquinas"></div>
+    <div class="zona" data-zona="Bar VIP"></div>
+    <div class="zona" data-zona="Sala de Dados"></div>
+    <div class="zona zona-central" data-zona="Zona de descanso"></div>
+    <div class="zona" data-zona="Caja Fuerte"></div>
+    <div class="zona" data-zona="Ruleta Dorada"></div>
+    <div class="zona" data-zona="Mesa VIP"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

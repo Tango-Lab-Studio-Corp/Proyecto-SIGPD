@@ -1,0 +1,80 @@
+body {
+  color: white;
+  font-family: Arial, sans-serif;
+  background-image: url('img/fondo-sin-letras.jpg');
+  background-repeat: repeat;
+  background-size: auto; /* No usar cover */
+  background-position: 0 0;
+  animation: moverFondo 20s linear infinite;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Animación suave de movimiento diagonal */
+@keyframes moverFondo {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+#tablero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.zona {
+  width: 120px;
+  height: 200px;
+  background-color: #ddd;
+  border: 2px dashed #999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.zona-central {
+  width: 140px;
+  height: 220px;
+  border-color: #666;
+}
+
+.zona:hover {
+  background-color: #ccc;
+}
+
+.ficha {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: grab;
+}
+
+#fichas-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.rojo { background-color: red; }
+.azul { background-color: blue; }
+.verde { background-color: green; }
+.amarillo { background-color: yellow; }
+.violeta { background-color: violet; }
+.naranja { background-color: orange; }
