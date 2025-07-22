@@ -10,6 +10,7 @@ Este proyecto forma parte de una solución digital para gestionar partidas del j
 ## 🕹️ Funcionalidad del Juego
 
 El usuario puede arrastrar y soltar fichas de colores en distintas zonas del tablero (3 a la izquierda, 1 central y 3 a la derecha). Cada zona representa una parte del juego inspirada en Draftosaurus, adaptada a una versión digital. Las fichas simulan dinosaurios y deben ser colocadas según reglas específicas que luego serán evaluadas.
+[Árbol de descisiones](https://drive.google.com/file/d/1MfBy0iyIrz2IfxdKNiB5GPkGKjQ85d0R/view?usp=sharing)
 
 ---
 ## 🗂️ Estructura del Repositorio
@@ -21,13 +22,14 @@ Proyecto-SIGPD/
 
 ---
 
-## 🧪 Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **HTML5**: estructura de la página
 - **CSS3**: diseño visual y animación de fondo
-- **JavaScript (ES6)**: lógica de interacción drag and drop
+- **JavaScript**: lógica de interacción drag and drop
 - **Editor.md**: editor Markdown para documentación
-
+- **Libre Sprite**: editor del tablero
+- **Tiled**: editor del mapa
 ---
 
 ## 🧠 Lógica Implementada
@@ -41,9 +43,8 @@ Proyecto-SIGPD/
 
 ## 🔁 Actualizaciones
 
+- **22/07/2025**: Se agrego en **README.nd** el árbol de decisiones, el cual se actualiza en tiempo real (fijarse en "Funcionalidad del Juego") 
 - **13/07/2025**: Se integró animación de fondo en movimiento (ejes X/Y)
-- **12/07/2025**: Implementación completa del sistema de arrastrar y soltar fichas
-- **11/07/2025**: Diseño visual del tablero con 7 zonas interactivas
 
 ---
 
