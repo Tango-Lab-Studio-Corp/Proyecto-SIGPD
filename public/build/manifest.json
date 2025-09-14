@@ -1,0 +1,20 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-DKD1ecnj.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/images/Fondo_Blanco.png": {
+    "file": "assets/Fondo_Blanco-BUarWE_E.png",
+    "src": "resources/images/Fondo_Blanco.png"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-xBE_u_p0.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}

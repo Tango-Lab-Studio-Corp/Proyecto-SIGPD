@@ -1,0 +1,1 @@
+const t=document.body,o=document.getElementById("toggleBtn");o.addEventListener("click",()=>{t.classList.toggle("dark-mode"),t.classList.toggle("light-mode"),o.textContent=t.classList.contains("dark-mode")?"Modo Claro":"Modo Oscuro"});
