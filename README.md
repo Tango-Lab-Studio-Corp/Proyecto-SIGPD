@@ -11,4 +11,10 @@
 
 ---
 
+## 📦 Instalación y Ejecución
+
+Clonar el repositorio:  
+```bash
+git clone https://github.com/usuario/repositorio.git
+
  
