@@ -15,7 +15,7 @@
 
 Clonar el repositorio:  
 ```bash
-https://github.com/Tango-Lab-Studio-Corp/Proyecto-SIGPD.git
+git clone https://github.com/Tango-Lab-Studio-Corp/Proyecto-SIGPD.git
 ```
 Entrar al directorio del proyecto:
 ```bash
