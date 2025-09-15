@@ -39,7 +39,7 @@
   <nav class="py-2 border-bottom">
     <div class="container d-flex justify-content-between align-items-center">
       <div class="mx-auto">
-        <button class="btn btn-outline-secondary mx-1">Guia</button>
+       <a href="https://www.canva.com/design/DAGy_W_rirU/chfWhNFYReFWvJ6sbK_mEw/edit?utm_content=DAGy_W_rirU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"> <button class="btn btn-outline-secondary mx-1">Guia</button></a>
         <button class="btn btn-outline-secondary mx-1">Juego</button>
         <button class="btn btn-outline-secondary mx-1">Reglas</button>
       </div>
@@ -59,7 +59,7 @@
           <img src="" class="card-img-top" alt="Opción 1">
           <div class="card-body">
             <h5 class="card-title">Opción 1</h5>
-            <p class="card-text">Descripción de la primera opción.</p>
+            <p class="card-text">Descripción</p>
             <button class="btn btn-primary">Ver más</button>
           </div>
         </div>
@@ -69,8 +69,8 @@
         <div class="card h-100 shadow">
           <img src="" class="card-img-top" alt="Opción 3">
           <div class="card-body">
-            <h5 class="card-title">Opción 3</h5>
-            <p class="card-text">Descripción de la tercera opción.</p>
+            <h5 class="card-title">Opción 2</h5>
+            <p class="card-text">Descripción</p>
             <button class="btn btn-primary">Ver más</button>
           </div>
         </div>
