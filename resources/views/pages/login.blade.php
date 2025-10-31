@@ -17,7 +17,7 @@
   <!-- Botón para activar modo claro / oscuro -->
   <div class="text-end p-3">
     <button id="modoToggle" class="btn btn-secondary btn-sm">🌙</button>
-  </div>f
+  </div>
 
   <div class="container">
     <div class="row justify-content-center mt-5">
