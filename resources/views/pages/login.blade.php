@@ -1,100 +1,62 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login y Registro</title>
+@extends('layouts.app')
 
+@section('title', 'Iniciar Sesión')
 
-    <link rel="icon" href="{{ Vite::asset('resources/images/Icono.png') }}" type="image/x-icon">
-    
-  <!-- Bootstrap CSS para estilos responsivos -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+@section('content')
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+        <div class="card shadow-sm rounded-4 border-0">
+            <div class="card-body p-4">
+                <h3 class="text-center mb-4">Iniciar Sesión</h3>
 
-</head>
-<body>
+                {{-- Mostrar errores --}}
+                @if($errors->any())
+                    <div class="alert alert-danger text-center py-2">
+                        {{ $errors->first() }}
+                    </div>
+                @endif
 
-  <!-- Botón para activar modo claro / oscuro -->
-  <div class="text-end p-3">
-    <button id="modoToggle" class="btn btn-secondary btn-sm">🌙</button>
-  </div>
+                {{-- Formulario de inicio de sesión --}}
+                <form method="POST" action="{{ route('login.submit') }}">
+                    @csrf
 
-  <div class="container">
-    <div class="row justify-content-center mt-5">
-      <div class="col-md-6 col-lg-5">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            name="email" 
+                            id="email" 
+                            placeholder="tu@correo.com" 
+                            required 
+                            autofocus
+                        >
+                    </div>
 
-        <!-- Tarjeta Bootstrap que contiene login y registro -->
-        <div class="card">
-          <div class="card-body">
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input 
+                            type="password" 
+                            class="form-control" 
+                            name="password" 
+                            id="password" 
+                            placeholder="••••••••" 
+                            required
+                        >
+                    </div>
 
-            <!-- Pestañas para alternar entre login y registro -->
-            <ul class="nav nav-pills nav-justified mb-3">
-              <li class="nav-item">
-                <!-- Pestaña login activa por defecto -->
-                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#login">Iniciar Sesión</button>
-              </li>
-              <li class="nav-item">
-                <!-- Pestaña registro -->
-                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#register">Registrarse</button>
-              </li>
-            </ul>
-
-            <div class="tab-content">
-
-              <!-- FORMULARIO LOGIN -->
-              <div class="tab-pane fade show active" id="login">
-                <form action="login.php" method="POST">
-                  <div class="mb-3">
-                    <label class="form-label">Correo Electrónico</label>
-                    <!-- Campo email -->
-                    <input type="email" name="email" class="form-control" required>
-                  </div>
-                  <div class="mb-3">
-                    <label class="form-label">Contraseña</label>
-                    <!-- Campo contraseña -->
-                    <input type="password" name="contrasena" class="form-control" required>
-                  </div>
-                  <!-- Botón para enviar formulario -->
-                  <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                    <button type="submit" class="btn btn-primary w-100">Ingresar</button>
                 </form>
-              </div>
 
-              <!-- FORMULARIO REGISTRO -->
-              <div class="tab-pane fade" id="register">
-                <form action="register.php" method="POST">
-                  <div class="mb-3">
-                    <label class="form-label">Nombre completo</label>
-                    <!-- Campo nombre -->
-                    <input type="text" name="nombre" class="form-control" required>
-                  </div>
-                  <div class="mb-3">
-                    <label class="form-label">Correo Electrónico</label>
-                    <!-- Campo email -->
-                    <input type="email" name="email" class="form-control" required>
-                  </div>
-                  <div class="mb-3">
-                    <label class="form-label">Contraseña</label>
-                    <!-- Campo contraseña -->
-                    <input type="password" name="contrasena" class="form-control" required>
-                  </div>
-                  <!-- Botón para enviar formulario -->
-                  <button type="submit" class="btn btn-primary w-100">Registrarse</button>
-                </form>
-              </div>
-
+                <div class="text-center mt-3">
+                    <p>¿No tenés cuenta? 
+                        <a href="{{ route('register') }}" class="text-decoration-none">
+                            Registrate
+                        </a>
+                    </p>
+                </div>
             </div>
-
-          </div>
         </div>
-
-      </div>
     </div>
-  </div>
-
-  <!-- Scripts de Bootstrap para funcionalidad -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Script externo para controlar el modo claro/oscuro -->
-  @vite(['resources/css/login.css', 'resources/js/login.js'])
-</body>
-</html>
+</div>
+@endsection

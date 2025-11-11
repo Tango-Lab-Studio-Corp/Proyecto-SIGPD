@@ -15,23 +15,47 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="light-mode d-flex flex-column min-vh-100"
-      data-dark-img="{{ Vite::asset('resources/images/Titulo_Blanco.png') }}"
-      data-light-img="{{ Vite::asset('resources/images/Titulo-Negro.png') }}">
+<body 
+    class="light-mode d-flex flex-column min-vh-100"
+    data-dark-img="{{ Vite::asset('resources/images/Titulo_Blanco.png') }}"
+    data-light-img="{{ Vite::asset('resources/images/Titulo-Negro.png') }}"
+>
 
     {{-- Header --}}
     @include('partials.header')
 
-    {{-- Navbar --}}
-    @include('partials.navbar')
+    {{-- Navbar (solo si existe el archivo) --}}
+    @includeWhen(View::exists('partials.navbar'), 'partials.navbar')
 
     {{-- Contenido principal --}}
     <main class="container my-5 flex-grow-1">
         @yield('content')
     </main>
 
-    {{-- Footer --}}
-    @include('partials.footer')
+    {{-- Footer (solo si existe el archivo) --}}
+    @includeWhen(View::exists('partials.footer'), 'partials.footer')
+
+    {{-- Script opcional para modo oscuro --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) {
+                body.classList.remove('light-mode', 'dark-mode');
+                body.classList.add(storedTheme);
+            }
+
+            const toggleBtn = document.getElementById("modeToggle");
+            if (toggleBtn) {
+                toggleBtn.addEventListener("click", () => {
+                    const newTheme = body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
+                    body.classList.remove('light-mode', 'dark-mode');
+                    body.classList.add(newTheme);
+                    localStorage.setItem('theme', newTheme);
+                });
+            }
+        });
+    </script>
 
 </body>
 </html>
