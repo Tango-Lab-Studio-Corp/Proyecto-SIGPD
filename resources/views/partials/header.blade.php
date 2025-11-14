@@ -1,0 +1,47 @@
+<header class="py-3 border-bottom">
+  <div class="container d-flex justify-content-between align-items-center">
+
+    <!-- Logo / Título -->
+    <h1 class="m-0">
+      <a href="{{ route('home') }}" class="text-decoration-none" style="color: inherit;">
+        High card enjoyer
+      </a>
+    </h1>
+
+    <!-- Navegación -->
+    <nav class="d-flex gap-2 align-items-center">
+      @php
+        $user = Auth::user();
+      @endphp
+
+      @if ($user)
+        <!-- Si el usuario está logueado -->
+        <a href="{{ route('dashboard') }}" class="btn btn-outline-secondary">
+          Perfil
+        </a>
+
+        @if ($user->role === 'admin')
+          <a href="{{ route('users') }}" class="btn btn-outline-secondary">
+            Panel Admin
+          </a>
+        @endif
+
+        <form action="{{ route('logout') }}" method="POST" class="d-inline">
+          @csrf
+          <button type="submit" class="btn btn-primary">
+            Cerrar sesión
+          </button>
+        </form>
+      @else
+        <!-- Si el usuario NO está logueado -->
+        <a href="{{ route('login') }}" class="btn btn-outline-secondary">
+          Iniciar sesión
+        </a>
+
+        <a href="{{ route('register') }}" class="btn btn-primary">
+          Registrarse
+        </a>
+      @endif
+    </nav>
+  </div>
+</header>
